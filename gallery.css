@@ -1,0 +1,142 @@
+/* 🔥 Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Prevents scrolling */
+    background: black;
+}
+
+/* 🔥 Background Video */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* 🔥 Gallery Container */
+.gallery-container {
+    width: 90%;
+    height: 90%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* 🔥 Gallery Title */
+.gallery-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* 🔥 Image Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* 🔹 Image Sizing */
+.gallery-item {
+    flex: 1 1 calc(33.33% - 20px); /* 3 images per row */
+    max-width: calc(33.33% - 20px);
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 🔹 Images */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* 🔹 Hover Effect */
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* 🔥 Buttons */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.gallery-btn, .gallery-home-btn {
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.gallery-btn {
+    background: #6c757d;
+    color: white;
+}
+
+.gallery-home-btn {
+    background: #6c757d;
+    color: white;
+}
+
+.gallery-btn:hover, .gallery-home-btn:hover {
+    transform: scale(1.1);
+}
+.image5 {
+    width: 100%;  /* Full container width */
+    height: 100%; /* Full container height */
+    overflow: hidden; /* Ensures no extra parts show */
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+}
+/* 🔥 Lightbox Modal (Initially Hidden) */
+.lightbox {
+    display: none;  /* Ensures it's hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.6);
+}
+

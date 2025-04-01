@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Hidden Message 💌✨</title>
+  <link rel="stylesheet" href="message.css">
+  <script src="message.js" defer></script>
+</head>
+<body>
+  <!-- Background Video -->
+  <video autoplay loop muted playsinline class="bg-video">
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  
+  <!-- Optional: Falling Hearts Container -->
+  <div class="hearts-container"></div>
+
+  <!-- Letter Container (includes the translucent box and button container) -->
+  <div class="letter-container">
+    <!-- Translucent Message Box -->
+    <div class="translucent-box" id="message-box">
+      <h2 class="message-title">Final Hidden Message 💌✨</h2>
+      <p id="message-text"></p>
+    </div>
+    
+    <!-- Button Container (Buttons placed near each other, centered under the box) -->
+    <div class="button-container">
+      <button id="home-btn" class="ui-btn" onclick="window.location.href='index.html'">Go Home</button>
+      <button id="open-btn" class="ui-btn" onclick="openMessage()">Open Letter</button>
+    </div>
+
+    <script>
+      // Remove the music iframe when message.html loads
+      window.onload = function() {
+          var musicFrame = parent.document.getElementById("music-frame");
+          if (musicFrame) {
+              musicFrame.remove();
+          }
+      };
+  </script>
+  </div>
+  
+</body>
+</html>
+

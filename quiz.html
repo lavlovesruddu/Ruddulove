@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz for Ruddu 💙</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+<div class="quiz-container">
+    <div class="quiz-box">
+        <h1 class="quiz-title">Hey Ruddu Rani, Let's Play a Game 💙</h1>
+        <p class="quiz-question" id="question-text"></p>
+        
+        <!-- Two-column answer layout -->
+        <div class="quiz-options">
+            <button class="quiz-option" onclick="checkAnswer(0)"></button>
+            <button class="quiz-option" onclick="checkAnswer(1)"></button>
+            <button class="quiz-option" onclick="checkAnswer(2)"></button>
+            <button class="quiz-option" onclick="checkAnswer(3)"></button>
+        </div>
+        
+        <p id="quiz-feedback"></p>
+        
+        <!-- Next Question Button -->
+        <button id="next-question" class="quiz-nav-btn" onclick="nextQuestion()">Next Question</button>
+    </div>
+
+    <!-- Quiz Completion Message -->
+    <div id="quiz-complete" class="quiz-box" style="display: none;">
+        YAYYYY! You Completed the Quiz! You know me Love!! 🎉
+        <br>
+        <button id="timeline-button" onclick="window.location.href='timeline.html'">Let's See Our Timeline</button>
+    </div>
+</div>
+
+
+
+
+
+    <script src="quiz.js"></script>
+</body>
+</html>
+<script src="music.js"></script>

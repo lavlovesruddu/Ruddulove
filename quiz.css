@@ -1,0 +1,146 @@
+/* Background Video */
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Centered Quiz Container */
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Translucent Box */
+.quiz-box {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    width: 50%;
+    min-height: 350px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Title */
+.quiz-title {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px black;
+}
+
+/* Question */
+.quiz-question {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Options Grid (2 columns) */
+.quiz-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 15px;
+}
+
+/* Option Buttons */
+.quiz-option {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-shadow: 1px 1px 3px black;
+}
+
+.quiz-option:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Feedback Message (Correct/Incorrect) */
+#quiz-feedback {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #00ff00; /* Green for correct */
+    text-shadow: 1px 1px 4px black;
+}
+
+/* "Next Question" Button */
+#next-question {
+    position: absolute;
+    bottom: 10px;
+
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-shadow: 1px 1px 3px black;
+}
+
+#next-question:hover {
+    background: rgb(45, 39, 39);
+}
+#quiz-complete {
+    background: rgba(255, 255, 255, 0.2); /* Lighter translucent background */
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    width: 40%; /* Slightly smaller than the main quiz box */
+    min-height: 180px; /* Adjust height to be smaller */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Adjust title inside completion box */
+#quiz-complete h1 {
+    font-size: 24px;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+/* Style for timeline button */
+.timeline-btn {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-shadow: 1px 1px 3px black;
+    margin-top: 10px;
+}
+
+.timeline-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
